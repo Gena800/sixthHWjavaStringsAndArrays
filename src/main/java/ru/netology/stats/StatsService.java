@@ -49,8 +49,9 @@ public class StatsService {
 
     public int lessSales(long[] sales) {
         int lessMeanSales = 0;
+        float meanSales = meanSales(sales);
         for (long sale : sales) {
-            if (sale < meanSales(sales)) {
+            if (sale < meanSales) {
                 lessMeanSales = lessMeanSales + 1;
             }
 
@@ -60,8 +61,9 @@ public class StatsService {
 
     public int moreSales(long[] sales) {
         int moreMeanSales = 0;
+        float meanSales = meanSales(sales);
         for (long sale : sales) {
-            if (sale > meanSales(sales)) {
+            if (sale > meanSales) {
                 moreMeanSales = moreMeanSales + 1;
             }
 
